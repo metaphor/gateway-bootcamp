@@ -1,8 +1,8 @@
 server:
-  port: 8081
+  port: 8091
 spring:
   application:
-    name: 'sp-api'
+    name: 'sp-auth'
   cloud:
     nacos:
       discovery:
