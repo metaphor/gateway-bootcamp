@@ -1,4 +1,7 @@
 spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
   cloud:
     gateway:
       routes:
@@ -9,6 +12,10 @@ spring:
         filters:
           - StripPrefix=1
           - CircuitBreaker=spApiCircuitBreaker
+          - name: RequestRateLimiter
+            args:
+              redis-rate-limiter.replenishRate: 5
+              redis-rate-limiter.burstCapacity: 5
       - id: sp-auth
         uri: lb://sp-auth
         predicates:

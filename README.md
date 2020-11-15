@@ -4,7 +4,7 @@ Gateway Bootcamp
 ## 依赖
 
 * nacos 可参考 [Nacos Docker](https://nacos.io/en-us/docs/quick-start-docker.html)
-
+* redis RedisRateLimiter依赖，参考docker-compose.yml启动redis
 
 ## 说明
 
