@@ -8,7 +8,7 @@ spring:
           - Path=/sp-api/**
         filters:
           - StripPrefix=1
-
+          - CircuitBreaker=spApiCircuitBreaker
       - id: sp-auth
         uri: lb://sp-auth
         predicates:
